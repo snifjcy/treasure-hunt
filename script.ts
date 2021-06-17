@@ -58,15 +58,11 @@ const run = async () => {
     await page.type('#mat-input-1', username);
     await page.type('#mat-input-2', config.password);
     await page.type('#mat-input-3', config.password);
-    
-    await page.click('#opt-in-checkbox-input');
 
     await screenshot(page);
 
     await page.keyboard.press('Enter');
     
-    await page.click('#mat-dialog-0 > app-alert-dialog > div.mat-dialog-actions.alert-dialog-actions > button.mat-focus-indicator.primary-action.mat-raised-button.mat-button-base.mat-accent');
-
     console.log(`[${i}] Submited form`);
 
     await page.waitForNavigation({ waitUntil: 'load', timeout: 0 });
