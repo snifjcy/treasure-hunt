@@ -61,13 +61,13 @@ const run = async () => {
 
     await screenshot(page);
     
-    await page.click('.mat-checkbox-inner-container')   
+//     await page.click('.mat-checkbox-inner-container')   
 
     await page.keyboard.press('Enter');
     
-    await page.waitForTimeout(1000);
+//     await page.waitForTimeout(1000);
     
-    await page.click('#mat-dialog-0 > app-alert-dialog > div.mat-dialog-actions.alert-dialog-actions > button.mat-focus-indicator.primary-action.mat-raised-button.mat-button-base.mat-accent');
+//     await page.click('#mat-dialog-0 > app-alert-dialog > div.mat-dialog-actions.alert-dialog-actions > button.mat-focus-indicator.primary-action.mat-raised-button.mat-button-base.mat-accent');
 
     
     console.log(`[${i}] Submited form`);
