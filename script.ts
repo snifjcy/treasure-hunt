@@ -60,8 +60,15 @@ const run = async () => {
     await page.type('#mat-input-3', config.password);
 
     await screenshot(page);
+    
+    await page.click('.mat-checkbox-inner-container')   
 
     await page.keyboard.press('Enter');
+    
+    await page.waitForTimeout(1000);
+    
+    await page.click('#mat-dialog-0 > app-alert-dialog > div.mat-dialog-actions.alert-dialog-actions > button.mat-focus-indicator.primary-action.mat-raised-button.mat-button-base.mat-accent');
+
     
     console.log(`[${i}] Submited form`);
 
